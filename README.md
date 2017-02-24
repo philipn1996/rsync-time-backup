@@ -1,3 +1,27 @@
+#This fork:
+Backup to a NAS that sits behind a Firewall/NAT/DSLite-Internet via a Linux-Machine on the internet.
+Configuration:
+- vServer
+- Router running OpenWRT (not neccessarily)
+- NAS supporting rsync
+
+Requirements:
+
+Without WOL
+- sshtunnel
+- vServer
+- linux
+(- Router running OpenWRT - not neccessary if sshtunnel is moved to the NAS)
+
+Full:
+- php with ssh2-extension installed on vServer
+
+
+Features:
+- Wake up the NAS if it is not online  (needs an always-on (OpenWRT)-Router)
+- Backup via LAN if the NAS is reachable via a local IP
+- Backup via Internet otherwise
+
 # Rsync time backup
 
 This script offers Time Machine-style backup using rsync. It creates incremental backups of files and directories to the destination of your choice. The backups are structured in a way that makes it easy to recover any file at any point in time.
